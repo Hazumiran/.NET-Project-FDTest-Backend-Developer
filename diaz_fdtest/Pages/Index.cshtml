@@ -1,0 +1,248 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (User.Identity.IsAuthenticated && Model.CurrentUser != null)
+{
+    <div class="alert alert-success d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h4 class="alert-heading mb-1">Welcome, @Model.CurrentUser.FullName!</h4>
+            <p class="mb-0 small">@Model.CurrentUser.Email</p>
+        </div>
+        <span class="badge bg-success">Status: Logged In</span>
+    </div>
+}
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="display-6">Library Collection</h2>
+        <p class="text-muted">Browse our collection of books uploaded by the community.</p>
+    </div>
+</div>
+
+<div class="card bg-light mb-4 shadow-sm">
+    <div class="card-body">
+        <form method="get">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <input type="text" name="SearchString" value="@Model.SearchString" class="form-control" placeholder="Search by Title..." />
+                </div>
+                <div class="col-md-3">
+                    <select name="BookAuthor" asp-items="Model.AuthorsList" class="form-select">
+                        <option value="">-- All Authors --</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select name="MinRating" class="form-select">
+                        <option value="">-- Min Rating --</option>
+                        <option value="5" selected="@(Model.MinRating == 5)">5 Stars</option>
+                        <option value="4" selected="@(Model.MinRating == 4)">4+ Stars</option>
+                        <option value="3" selected="@(Model.MinRating == 3)">3+ Stars</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select name="SortOrder" class="form-select">
+                        <option value="date_desc" selected="@(Model.SortOrder == "date_desc")">Newest First</option>
+                        <option value="date_asc" selected="@(Model.SortOrder == "date_asc")">Oldest First</option>
+                        <option value="rating_desc" selected="@(Model.SortOrder == "rating_desc")">Highest Rated</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-grid">
+                    <button type="submit" class="btn btn-primary">Filter & Sort</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @if (Model.Books.Any())
+    {
+        @foreach (var book in Model.Books)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div style="height: 200px; overflow: hidden; background-color: #f8f9fa;" class="d-flex align-items-center justify-content-center border-bottom">
+                        @if (!string.IsNullOrEmpty(book.ImageThumbnail))
+                        {
+                            <img src="@book.ImageThumbnail" class="card-img-top" alt="@book.Title" style="height: 100%; width: 100%; object-fit: cover;">
+                        }
+                        else
+                        {
+                            <span class="text-muted"><i class="bi bi-book" style="font-size: 3rem;"></i></span>
+                        }
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate" title="@book.Title">@book.Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@book.Author</h6>
+
+                        <div class="text-warning mb-2">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (i <= book.Rating)
+                                {
+                                    <i class="bi bi-star-fill"></i>
+                                }
+                                else
+                                {
+
+                                    <i class="bi bi-star text-muted"></i>
+                                }
+                            }
+                        </div>
+
+                        <p class="card-text small text-muted text-truncate">
+                            @book.Description
+                        </p>
+                    </div>
+
+                    <div class="card-footer bg-white border-top-0 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            <i class="bi bi-calendar"></i> @book.CreatedAt.ToString("MMM dd, yyyy")
+                        </small>
+
+                        <button type="button"
+                                class="btn btn-sm btn-outline-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#detailModal"
+                                data-title="@book.Title"
+                                data-author="@book.Author"
+                                data-desc="@book.Description"
+                                data-img="@book.ImageThumbnail"
+                                data-rating="@book.Rating"
+                                data-date="@book.CreatedAt.ToString("dd MMMM yyyy")">
+                            <i class="bi bi-eye"></i> Detail
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-12 text-center py-5">
+            <h4 class="text-muted">No books found matching your criteria.</h4>
+            <a href="/" class="btn btn-link">Clear Filters</a>
+        </div>
+    }
+</div>
+
+@if (Model.TotalPages > 1)
+{
+    <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+            <li class="page-item @(!Model.HasPreviousPage ? "disabled" : "")">
+                <a class="page-link"
+                   asp-route-PageIndex="@(Model.PageIndex - 1)"
+                   asp-route-SearchString="@Model.SearchString"
+                   asp-route-BookAuthor="@Model.BookAuthor"
+                   asp-route-MinRating="@Model.MinRating"
+                   asp-route-SortOrder="@Model.SortOrder">
+                    Previous
+                </a>
+            </li>
+
+            <li class="page-item disabled">
+                <span class="page-link">Page @Model.PageIndex of @Model.TotalPages</span>
+            </li>
+
+            <li class="page-item @(!Model.HasNextPage ? "disabled" : "")">
+                <a class="page-link"
+                   asp-route-PageIndex="@(Model.PageIndex + 1)"
+                   asp-route-SearchString="@Model.SearchString"
+                   asp-route-BookAuthor="@Model.BookAuthor"
+                   asp-route-MinRating="@Model.MinRating"
+                   asp-route-SortOrder="@Model.SortOrder">
+                    Next
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+
+<div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Book Detail</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 mb-3 text-center">
+                        <img id="modalImg" src="" class="img-fluid rounded shadow-sm" alt="Book Cover" style="max-height: 400px; object-fit: contain;" />
+                        <div id="modalNoImg" class="text-muted py-5 d-none">
+                            <i class="bi bi-book" style="font-size: 5rem;"></i>
+                            <p>No Image Available</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <h3 id="modalBookTitle" class="fw-bold"></h3>
+                        <p class="text-muted mb-2">by <span id="modalAuthor" class="fw-bold text-dark"></span></p>
+
+                        <div class="mb-3" id="modalRating">
+                        </div>
+
+                        <p class="small text-muted mb-3">Uploaded on: <span id="modalDate"></span></p>
+
+                        <hr />
+                        <h6 class="fw-bold">Description</h6>
+                        <p id="modalDesc" style="white-space: pre-line;"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var detailModal = document.getElementById('detailModal');
+        detailModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+
+            var title = button.getAttribute('data-title');
+            var author = button.getAttribute('data-author');
+            var desc = button.getAttribute('data-desc');
+            var img = button.getAttribute('data-img');
+            var rating = parseInt(button.getAttribute('data-rating'));
+            var date = button.getAttribute('data-date');
+
+            detailModal.querySelector('#modalBookTitle').textContent = title;
+            detailModal.querySelector('#modalAuthor').textContent = author;
+            detailModal.querySelector('#modalDesc').textContent = desc;
+            detailModal.querySelector('#modalDate').textContent = date;
+
+            var imgEl = detailModal.querySelector('#modalImg');
+            var noImgEl = detailModal.querySelector('#modalNoImg');
+
+            if (img && img !== "") {
+                imgEl.src = img;
+                imgEl.classList.remove('d-none');
+                noImgEl.classList.add('d-none');
+            } else {
+                imgEl.classList.add('d-none');
+                noImgEl.classList.remove('d-none');
+            }
+
+            var starsHtml = '';
+            for (var i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    starsHtml += '<i class="bi bi-star-fill text-warning fs-5"></i> ';
+                } else {
+                    starsHtml += '<i class="bi bi-star text-muted fs-5"></i> ';
+                }
+            }
+            starsHtml += '<span class="ms-2 text-muted">(' + rating + '/5)</span>';
+
+            detailModal.querySelector('#modalRating').innerHTML = starsHtml;
+        });
+    </script>
+}

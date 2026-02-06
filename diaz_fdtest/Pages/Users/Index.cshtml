@@ -1,0 +1,61 @@
+﻿@page
+@model diaz_fdtest.Pages.Users.IndexModel
+
+<h2>User List</h2>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-md-4">
+        <input type="text"
+               name="search"
+               value="@Model.Search"
+               class="form-control"
+               placeholder="Search by name or email" />
+    </div>
+
+    <div class="col-md-3">
+        <select name="verified" class="form-select">
+            <option value="">All</option>
+            <option value="true" selected="@(Model.Verified == true)">
+                Email Verified
+            </option>
+            <option value="false" selected="@(Model.Verified == false)">
+                Not Verified
+            </option>
+        </select>
+    </div>
+
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">
+            Filter
+        </button>
+    </div>
+
+    <div class="col-md-2">
+        <a asp-page="./Index" class="btn btn-secondary w-100">
+            Reset
+        </a>
+    </div>
+</form>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Email Confirmed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.FullName</td>
+                <td>@user.Email</td>
+                <td>@user.CreatedAt.ToString("yyyy-MM-dd")</td>
+                <td>@(user.EmailConfirmed ? "Yes" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>

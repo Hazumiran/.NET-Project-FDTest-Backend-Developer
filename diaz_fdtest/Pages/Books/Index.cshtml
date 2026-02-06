@@ -1,0 +1,125 @@
+﻿@page
+@model IndexModelBooks
+
+<h2>Books</h2>
+
+<a asp-page="Create" class="btn btn-primary mb-3">Add Book</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Books == null || !Model.Books.Any())
+        {
+            <tr>
+                <td colspan="7" class="text-center">
+                    No books available
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var book in Model.Books)
+            {
+                <tr class="align-middle">
+                    <td>
+                        @if (!string.IsNullOrEmpty(book.ImageThumbnail))
+                        {
+                            <img src="@book.ImageThumbnail"
+                                 alt="@book.Title"
+                                 style="width: 80px; height: auto; object-fit: cover;"
+                                 class="img-thumbnail" />
+                        }
+                        else
+                        {
+                            <span class="text-muted">No Image</span>
+                        }
+                    </td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+
+                    <td style="max-width: 200px;" class="text-truncate" title="@book.Description">
+                        @book.Description
+                    </td>
+
+                    <td>
+                        <div class="d-flex text-warning">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (i <= book.Rating)
+                                {
+                                    <i class="bi bi-star-fill"></i>
+                                }
+                                else
+                                {
+                                    <i class="bi bi-star text-muted"></i>
+                                }
+                            }
+                        </div>
+                    </td>
+                    <td>@book.CreatedAt.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@book.Id" class="btn btn-sm btn-warning">Edit</a>
+                        <button type="button"
+                                class="btn btn-sm btn-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-id="@book.Id"
+                                data-title="@book.Title">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete <strong id="bookTitleToDelete"></strong>?
+                <p class="text-muted small mt-2">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+
+                <form method="post" asp-page-handler="Delete">
+                    <input type="hidden" name="id" id="bookIdToDelete" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var deleteModal = document.getElementById('deleteModal');
+        deleteModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var id = button.getAttribute('data-id');
+            var title = button.getAttribute('data-title');
+
+            var modalTitleInput = deleteModal.querySelector('#bookTitleToDelete');
+            var modalIdInput = deleteModal.querySelector('#bookIdToDelete');
+
+            modalTitleInput.textContent = title;
+            modalIdInput.value = id;
+        });
+    </script>
+}

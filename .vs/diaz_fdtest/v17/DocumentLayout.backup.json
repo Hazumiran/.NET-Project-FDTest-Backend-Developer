@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Kerja\\PT Fan\\diaz_fdtest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|solutionrelative:diaz_fdtest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|solutionrelative:diaz_fdtest\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest\\pages\\books\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|solutionrelative:diaz_fdtest\\pages\\books\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest\\pages\\books\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|solutionrelative:diaz_fdtest\\pages\\books\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest\\pages\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|solutionrelative:diaz_fdtest\\pages\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Index.cshtml*",
+              "RelativeToolTip": "diaz_fdtest\\Pages\\Index.cshtml*",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAmwP0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-06T09:19:30.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Books\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Edit.cshtml.cs",
+              "RelativeToolTip": "diaz_fdtest\\Pages\\Books\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:17:29.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
+              "RelativeToolTip": "diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA/wDgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:12:49.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Books\\Index.cshtml",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml",
+              "RelativeToolTip": "diaz_fdtest\\Pages\\Books\\Index.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAmwHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-06T09:12:49.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "diaz_fdtest\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAmwDkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-06T09:06:41.297Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

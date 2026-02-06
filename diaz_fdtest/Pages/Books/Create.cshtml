@@ -1,0 +1,54 @@
+﻿@page
+@model CreateModel
+
+<h2>Add Book</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Book.Title" class="form-label">Title</label>
+                <input asp-for="Book.Title" class="form-control" placeholder="Books Title" />
+                <span asp-validation-for="Book.Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Author</label>
+                <input type="text" class="form-control" value="@Model.CurrentAuthorName" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Book.Description" class="form-label">Description</label>
+                <textarea asp-for="Book.Description" class="form-control" rows="4" placeholder="Description of the book"></textarea>
+                <span asp-validation-for="Book.Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Thumbnail Image</label>
+                <input asp-for="ImageUpload" type="file" class="form-control" accept="image/*" />
+                <span asp-validation-for="ImageUpload" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Book.Rating" class="form-label">Rating (0-5)</label>
+                <input asp-for="Book.Rating" type="number" min="0" max="5" class="form-control" />
+                <span asp-validation-for="Book.Rating" class="text-danger"></span>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save"></i> Save Data
+                </button>
+                <a asp-page="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

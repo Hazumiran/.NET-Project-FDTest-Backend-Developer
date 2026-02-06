@@ -1,0 +1,68 @@
+﻿@page "{id:int}"
+@model EditModel
+
+<h2>Edit Book</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Book.Id" />
+
+            <div class="mb-3">
+                <label asp-for="Book.Title" class="form-label">Title</label>
+                <input asp-for="Book.Title" class="form-control" />
+                <span asp-validation-for="Book.Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Author</label>
+                <input asp-for="Book.Author" class="form-control" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Book.Description" class="form-label">Description</label>
+                <textarea asp-for="Book.Description" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Book.Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Thumbnail Image</label>
+
+                <div class="mb-2">
+                    @if (!string.IsNullOrEmpty(Model.Book.ImageThumbnail))
+                    {
+                        <img src="@Model.Book.ImageThumbnail" class="img-thumbnail" style="max-height: 150px;" />
+                    }
+                    else
+                    {
+                        <span class="text-muted">No image available.</span>
+                    }
+                </div>
+
+                <input asp-for="ImageUpload" type="file" class="form-control" accept="image/*" />
+                <span asp-validation-for="ImageUpload" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Book.Rating" class="form-label">Rating (0-5)</label>
+                <input asp-for="Book.Rating" type="number" min="0" max="5" class="form-control" />
+                <span asp-validation-for="Book.Rating" class="text-danger"></span>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save"></i> Update Changes
+                </button>
+                <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
