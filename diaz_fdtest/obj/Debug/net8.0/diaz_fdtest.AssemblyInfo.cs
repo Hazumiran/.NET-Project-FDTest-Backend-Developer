@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("diaz_fdtest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e62bbe4df4296ddc126e8b3045e4ab5916a5553")]
 [assembly: System.Reflection.AssemblyProductAttribute("diaz_fdtest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("diaz_fdtest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Kerja\\PT Fan\\diaz_fdtest\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest.tests\\booktests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|solutionrelative:diaz_fdtest.tests\\booktests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest.tests\\mockhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|solutionrelative:diaz_fdtest.tests\\mockhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|solutionrelative:diaz_fdtest.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest.tests\\diaz_fdtest.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BB5E7B02-AECE-4B64-A977-519F204C883F}|diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj|solutionrelative:diaz_fdtest.tests\\diaz_fdtest.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|d:\\kerja\\pt fan\\diaz_fdtest\\diaz_fdtest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DD9BDA0A-9D26-4FF6-96D8-56AF72C25B53}|diaz_fdtest\\diaz_fdtest.csproj|solutionrelative:diaz_fdtest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -30,28 +46,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookTests.cs",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\BookTests.cs",
+              "RelativeDocumentMoniker": "diaz_fdtest.Tests\\BookTests.cs",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\BookTests.cs",
+              "RelativeToolTip": "diaz_fdtest.Tests\\BookTests.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwDcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:57:07.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MockHelpers.cs",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\MockHelpers.cs",
+              "RelativeDocumentMoniker": "diaz_fdtest.Tests\\MockHelpers.cs",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\MockHelpers.cs",
+              "RelativeToolTip": "diaz_fdtest.Tests\\MockHelpers.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:56:04.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "diaz_fdtest.Tests",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj",
+              "RelativeDocumentMoniker": "diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj",
+              "RelativeToolTip": "diaz_fdtest.Tests\\diaz_fdtest.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-06T09:48:31.153Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "diaz_fdtest.Tests\\UnitTest1.cs",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "diaz_fdtest.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:42:09.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Index.cshtml",
-              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Index.cshtml*",
-              "RelativeToolTip": "diaz_fdtest\\Pages\\Index.cshtml*",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAmwP0AAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Index.cshtml",
+              "RelativeToolTip": "diaz_fdtest\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-06T09:19:30.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Edit.cshtml.cs",
               "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Edit.cshtml.cs",
               "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Books\\Edit.cshtml.cs",
@@ -64,20 +132,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
               "ToolTip": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
               "RelativeToolTip": "diaz_fdtest\\Pages\\Books\\Index.cshtml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA/wDgAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswDgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T09:12:49.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Books\\Index.cshtml",
               "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Books\\Index.cshtml",
@@ -90,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Kerja\\PT Fan\\diaz_fdtest\\diaz_fdtest\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "diaz_fdtest\\Pages\\Shared\\_Layout.cshtml",

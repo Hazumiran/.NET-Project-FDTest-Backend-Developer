@@ -22,7 +22,8 @@ The application implements **User Management** and **Book Management (CRUD)** fe
   - `AspNetRoles`
   - `Books`
 - Database updates are applied using command:
-Add-Migration InitialCreate
+ - `Add-Migration`
+ - `InitialCreate`
 Update-Database
 
 ## 2. Install Nuget Requirement On Project
